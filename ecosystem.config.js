@@ -1,16 +1,16 @@
 module.exports = {
   apps: [
     {
-      name: "gestao-atletas-front-dev",
+      name: "gestao-atletas-front",
       cwd: "/root/Gestao-Atletas-front",
       script: "node_modules/next/dist/bin/next",
-      args: "dev -p 3000",
+      args: "start -p 3000",
       instances: 1,
       exec_mode: "fork",
-      watch: true,
-      ignore_watch: ["node_modules", ".next", ".git"],
+      watch: false,
       env: {
-        NODE_ENV: "development"
+        NODE_ENV: "production",
+        NODE_OPTIONS: "--max-old-space-size=512"
       }
     }
   ]
